@@ -42,8 +42,8 @@ def gauss_map(x0,a,b,n,view_plot):
   	#n - długość szeregu
   	#view_plot - jeżeli 1 rysuje wykresy
 	#inicializacja wektora, przypisanie wartości początkowej
-  logistic_series = np.zeros(n)
-  logistic_series[0] = x0
+  gauss_series = np.zeros(n)
+  gauss_series[0] = x0
   """
   Przykład pętli for
   
@@ -54,20 +54,20 @@ def gauss_map(x0,a,b,n,view_plot):
   """
 
   for ii in np.arange(1,n):
-    tmp= np.exp(-a*logistic_series[ii-1]*logistic_series[ii-1]+b)
-    logistic_series[ii] = np.mod(tmp,1)
+    tmp= np.exp(-a*gauss_series[ii-1]*gauss_series[ii-1]+b)
+    gauss_series[ii] = np.mod(tmp,1)
 
   #Narysowanie wykresów
   if view_plot==1:
     
     plt.figure(1)
     plt.subplot(311)
-    plt.plot(logistic_series)
+    plt.plot(gauss_series)
 
     plt.subplot(212)
-    plt.plot(logistic_series[1:-2],logistic_series[2:-1],'o')
+    plt.plot(gauss_series[1:-2],gauss_series[2:-1],'o')
     plt.show()  
 
-  return logistic_series
+  return gauss_series
   
 
