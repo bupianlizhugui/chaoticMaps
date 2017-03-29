@@ -58,7 +58,7 @@ def circle_map(x0,r,n,view_plot):
   zakresem może być właściwie każdy typ zmiennej, str,char też.
   """
   for ii in np.arange(1,n):
-    tmp= circle_series[ii-1]+a+(b/2*np.pi)*np.sin(2*np.pi circle_series[ii-1])
+    tmp= circle_series[ii-1]+a+(b/(2*np.pi))*np.sin(2*np.pi*circle_series[ii-1])
     cirlce_series[ii] = np.mod(tmp,1)
    
   
