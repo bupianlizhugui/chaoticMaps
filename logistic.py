@@ -61,7 +61,7 @@ def logistic_map(x0,r,n,view_plot):
     if logistic_series[ii-1]>0.5:              
       tmp= r*(1-logistic_series[ii-1])
       logistic_series[ii] = np.mod(tmp,1)
-    elif logistic_series[ii-1]>0.5:
+    elif logistic_series[ii-1]<0.5:
       tmp= r*logistic_series[ii-1]
       logistic_series[ii] = np.mod(tmp,1)  
    
